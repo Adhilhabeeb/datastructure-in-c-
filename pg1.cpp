@@ -7,11 +7,11 @@ int main(){
     cout<<"\nEnter the size:\n";
     cin>>size;
     cout<<"\nEnter the array elements:\n";
-    for(i=0;i<=size;i++){
+    for(i=0;i<size;i++){
          cin>>a[i];
     }
     cout<<"\n before insertion\n";
-    for(i=0;i<=size;i++){
+    for(i=0;i<size;i++){
          cout<<a[i]<<"\t";
     }
     cout<<"\nEnter the data to be inserted:\n";

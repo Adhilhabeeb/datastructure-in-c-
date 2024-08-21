@@ -27,7 +27,7 @@ for(i = 0; i < size1; i++) {
 
 size3 = size1 + size2;
 
-for(i = 0, k = size1; k < size3 && i < size2; i++, k++) {
+for(i = 0, k = size1;i < size2 && k < size3; i++, k++) {
     arr3[k] = arr2[i];
 }
 
