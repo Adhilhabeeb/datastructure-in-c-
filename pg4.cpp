@@ -30,7 +30,7 @@ void printPoly(int poly[],int n){
     }
 }
 
-int main(){
+int main(){ 
         
      int A[]={5,0,10,6};
 
