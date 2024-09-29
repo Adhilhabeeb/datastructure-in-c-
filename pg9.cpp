@@ -41,7 +41,7 @@ class SparseMatrix{
 
                 while(apos<len&&bpos<b.len){
 
-                    if(data[apos][0]>b.data[bpos][0]|| (data[apos][0]==b.data[bpos][0]&&data[apos][1]>b.data[bpos][1])){
+                    if(data[apos][0]>b.data[bpos][0]  || (data[apos][0]==b.data[bpos][0]&&data[apos][1]>b.data[bpos][1])){
                         result.insert(b.data[bpos][0],b.data[bpos][1],b.data[bpos][2]);
 
                         bpos++;
