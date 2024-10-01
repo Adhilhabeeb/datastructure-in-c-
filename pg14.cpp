@@ -1,12 +1,12 @@
-// Linear Queue using arrays
+// linear queue using arrays
 #include<iostream>
 using namespace std;
 
-class Queue{
+class Queue {
     int queue[50];
-    int n=50;
-    int fro=-1;
-    int rea=-1;
+    int n = 50;  // Queue size
+    int fro = -1;  // Front pointer
+    int rea = -1;  // Rear pointer
 
     public:
         void enqueue();
@@ -14,72 +14,81 @@ class Queue{
         void display();
 };
 
-void Queue::enqueue(){
+void Queue::enqueue() {
     int num;
 
-    if(rea>=n-1){
-        cout<<"\n Queue is over flow\n";
-    }else{
-        if(fro==-1)
-        fro=0;
-        cout<<"\n Enter the number into queue\n";
-        cin>>num;
+    // Check for queue overflow
+    if(rea >= n - 1) {
+        cout << "\nQueue is overflow\n";
+    } else {
+        if(fro == -1) // If queue is initially empty
+            fro = 0;
+        cout << "\nEnter the number into queue: ";
+        cin >> num;
         rea++;
-        queue[rea]=num;
+        queue[rea] = num;
     }
 }
 
-void Queue::dequeue(){
-    
-    if(fro==-1||fro>rea){
-        cout<<"\n Under flow\n";
-    }else{
-        int val=queue[fro];
-        cout<<"\n The deleted element is = "<<queue[fro]<<"\n";
+void Queue::dequeue() {
+    // Check for queue underflow
+    if(fro == -1 || fro > rea) {
+        cout << "\nQueue is underflow\n";
+    } else {
+        cout << "\nThe deleted element is = " << queue[fro] << "\n";
         fro++;
-    }
-}
 
-void Queue::display(){
-    
-    if(fro==-1){
-        cout<<"\n Queue is empty\n";
-    }else{
-        for(int i=fro;i<=rea;i++){
-            cout<<queue[i]<<"\t";
+        // Reset front and rear pointers when the queue is empty
+        if(fro > rea) {
+            fro = -1;
+            rea = -1;
         }
     }
 }
 
+void Queue::display() {
+    if(fro == -1) {
+        cout << "\nQueue is empty\n";
+    } else {
+        cout << "\nQueue elements are: ";
+        for(int i = fro; i <= rea; i++) {
+            cout << queue[i] << "\t";
+        }
+        cout << endl;
+    }
+}
 
-
-int main(){
+int main() {
     Queue obj;
     int ch;
-    cout<<"_____ THIS IS USING CLASS _____\n";
-    cout<<"\n Enter 1) Insertion\n";
-    cout<<"\n Enter 2) for deletion\n";
-    cout<<"\n Enter 3) display\n";
-    cout<<"\n Enter 4) for exit\n";
 
-    do{
-      cout<<"\n Enter your choice\n";
-      cin>>ch;
+    cout << "_____ THIS IS USING CLASS _____\n";
+    cout << "\n1) Insertion (Enqueue)\n";
+    cout << "2) Deletion (Dequeue)\n";
+    cout << "3) Display Queue\n";
+    cout << "4) Exit\n";
 
-      switch (ch)
-      {
-        case 1:obj.enqueue();
-        break;
-        case 2:obj.dequeue();
-        break;
-        case 3:obj.display();
-        break;
-        case 4:cout<<"\n Exit \n";
-        break;
-      
-        default:
-        cout<<"\n Enter valid entry ";
-      }  
-    }while (ch!=4);
+    do {
+        cout << "\nEnter your choice: ";
+        cin >> ch;
+
+        switch (ch) {
+            case 1: 
+                obj.enqueue();
+                break;
+            case 2: 
+                obj.dequeue();
+                break;
+            case 3: 
+                obj.display();
+                break;
+            case 4: 
+                cout << "\nExit\n";
+                break;
+            default:
+                cout << "\nEnter a valid choice\n";
+        }
+    } while (ch != 4);
+
     return 0;
 }
