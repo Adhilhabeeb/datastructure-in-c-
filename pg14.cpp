@@ -63,7 +63,7 @@ int main() {
     int ch;
 
     cout << "_____ THIS IS USING CLASS _____\n";
-    cout << "\n1) Insertion (Enqueue)\n";
+    cout << "1) Insertion (Enqueue)\n";
     cout << "2) Deletion (Dequeue)\n";
     cout << "3) Display Queue\n";
     cout << "4) Exit\n";
