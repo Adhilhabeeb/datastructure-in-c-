@@ -1,4 +1,4 @@
-// Quick Sort
+// QUICK SORT
 #include <iostream>
 using namespace std;
 void quicksort(int a[], int lb, int ub);

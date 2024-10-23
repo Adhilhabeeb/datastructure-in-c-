@@ -1,4 +1,4 @@
-// linear queue using arrays
+// LINEAR QUEUE USING ARRAYS
 #include<iostream>
 using namespace std;
 

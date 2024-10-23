@@ -1,3 +1,4 @@
+// SPARSE MATRIX IN TRIPLET FORM
 #include <iostream>
 using namespace std;
 class Sparse

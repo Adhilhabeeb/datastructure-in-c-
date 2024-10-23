@@ -1,4 +1,4 @@
-// merge array
+// MERGE ARRAY
 #include<iostream>
 using namespace std;
 

@@ -1,4 +1,4 @@
-// Linear stack using arrays
+// LINEAR STACK USING ARRAYS
 #include<iostream>
 using namespace std;
 class Stack{

@@ -1,4 +1,4 @@
-// postfix evaluation using arrays
+// POSTFIX EVALUATION USING ARRAYS
 #include<iostream>
 #include<cmath>
 #include<stack>

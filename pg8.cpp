@@ -1,4 +1,4 @@
-// binary search
+// BINARY SEARCH
 #include <iostream>
 using namespace std;
 int main()

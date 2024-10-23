@@ -1,4 +1,4 @@
-// add two sparse matrices using arrays
+// SPARSE MATRIX ADDITION USING ARRAYS
 #include<iostream>
 using namespace std;
 

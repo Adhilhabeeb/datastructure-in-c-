@@ -1,4 +1,4 @@
-// infix expression to postfix expression
+// INFIX EXPRESSION TO POSTFIX EXPRESSION
 // Infix: a+b*c Postfix: abc*+
 #include<iostream>
 #include<stack>
